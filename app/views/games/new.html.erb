@@ -1,0 +1,17 @@
+<h1>New game</h1>
+<p>Find me in app/views/games/new.html.erb</p>
+<% @letters.each do |letter| %>
+  <ul class="list-unstyled list-inline" style="display:inline">
+    <li class="list-inline-item">
+      <%= letter %>
+    </li>
+  </ul>
+<%end%>
+
+<h2>What's the longest word you can find?</h2>
+<form class="form-inline" action="/score" method="get">
+  <div class="form-group">
+    <input class="form-control" type="text" name="try" placeholder="word?">
+    <input class="btn btn-primary" type="submit" value="Play">
+  </div>
+</form>

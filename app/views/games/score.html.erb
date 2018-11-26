@@ -1,0 +1,10 @@
+<h1>Result</h1>
+<% if  @score[:score] == 0 && @english == true %>
+  <p>Sorry but <strong><%=@word%></strong> <%= @score[:message] %> <%= @letters.join(", ") %></p>
+<% elsif @score[:score] == 0 && @english == false %>
+  <p>Sorry but <strong><%=@word%></strong> <%= @score[:message] %></p>
+<% else %>
+  <p><strong>Congratulations</strong> <%=@word%> <%= @score[:message] %></p>
+<% end %>
+
+<%= link_to "Try again", new_path %>
