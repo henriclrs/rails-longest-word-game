@@ -3,7 +3,7 @@ require 'json'
 
 class GamesController < ApplicationController
   def new
-    @letters = (0...8).map { ('a'..'z').to_a.sample }
+    @letters = (0...10).map { ('a'..'z').to_a.sample }
     session[:letters] = @letters
   end
 
